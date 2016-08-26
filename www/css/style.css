@@ -1,1 +1,315 @@
 /* Empty. Add your own CSS if you like */
+
+.bar.bar-stable {
+    border-color: #1F4285;
+    background-color: #1F4280;
+    background-image: linear-gradient(0deg, #1F4285, #1F4285 50%, transparent 50%);
+    color: #fff;
+}
+.bar.bar-header{
+    border-color: #1F4285;
+    background-color: #1F4280;
+    background-image: linear-gradient(0deg, #1F4285, #1F4285 50%, transparent 50%);
+    color: #fff;
+}
+.title-image {
+    height: 32px;
+    margin: 6px 0px 0px 39px;
+ }
+.bar-stable .button.button-icon {
+    color: #fff;
+}
+.cust-right{
+    float:right;
+    margin: 4px 0px 0px 0px;
+}
+.bar-stable .button {
+    border-color: #b2b2b2;
+    background-color: #f8f8f8;
+    color: #444;
+}
+.title-image-side-menu{
+    height: 32px;
+    display: block;
+    margin: 2px auto;
+}
+.cust_bar.cust_bar-subheader {
+    top: 44px;
+    background-color: rgba(119, 188, 31, 0.78);
+}
+.cust-img-span{
+    width: 25px;
+}
+.cust-img.cust-img-phone{
+    max-width: 25px;
+    
+}
+.call.call_us{
+    font-size: 12px;
+    color:#fff;
+    vertical-align: top;
+    cursor: pointer;
+   
+}
+.call_us_strong{
+    font-size: 32px;
+    color:#fff;
+    min-width: 240px;
+    padding-top: 4px;
+    padding-left: 34px;
+}
+.call_us_msg{
+    color:#fff;
+}
+.tabs-top > .tabs, .tabs.tabs-top {
+    top: 92px;
+}
+.has-header.has-tabs-top {
+    top: 140px;
+}
+textarea {
+    width: 50em !important;
+    height: 8em;
+}
+.buttons.cust_close {
+    margin-left: 100px;
+}
+.title-image.cust_login_logo {
+    margin: 2px 0px 0px 39px;
+}
+.img-responsive{
+    height: 197px;
+    width: 228px;
+    display: block;
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+}
+.text-justify{
+    text-align: justify;
+}
+.cust_who_are_geeks{
+    color:#333;
+}
+.purple-ring {
+    border: 5px solid #333399;
+    width:60px;
+    height:60px;
+    border-radius:30px;
+    font-size:12px;
+    color:#fff;
+    line-height:20px;
+    text-align:center;
+    margin-top: 25px;
+}
+.purple-ring img{
+    width:30px;
+    height:30px;
+    margin: 8px;
+}
+.green-ring{
+    border: 5px solid #77BC1F;
+    width:60px;
+    height:60px;
+    border-radius:30px;
+    font-size:12px;
+    color:#fff;
+    line-height:20px;
+    text-align:center;
+    margin-top: 25px;
+}
+.green-ring img{
+    width:30px;
+    height:30px;
+    margin:10px;
+}
+.cust_help_when_you_need{
+    text-align: left;
+    color:#333;
+}
+.cust_valign{
+    color:#333;
+    text-align: center;
+}
+.img_div{
+    padding: 0px 20px 0px 10px;
+}
+.cust_help_when_you_need_text{
+    color:#333;
+}
+.custh2 {
+    padding-top: 64px;
+}
+.for-padding{
+    padding:5px;
+}
+.cust_help_when_you_need_text_gucall{
+
+}
+.cust_row.sliide11 {
+    background: url(../img/banner-green.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cust_row.sliide11 .testimony {
+    background: rgba(119, 188, 31, 0.8);
+    margin: 10px 0;
+}
+.wht{
+    color:aliceblue;
+}
+.msg_sent{
+    text-align: center;
+    color: #94CA50;
+}
+.c_abt_img {
+    height: 35px;
+    width: 35px;
+    margin-top: 8px;
+}
+.button-blue{
+    background:#1F4280
+ }
+.button{
+    color:#fff;
+}
+.button-clear.button-clear {
+    color: #fff;
+}
+span.picspan {
+    margin-top: 5px;
+    display: inline-block;
+    clear: both;
+}
+span.videospan {
+    margin-top: 5px;
+    display: inline-block;
+    clear: both;
+}
+.padding.error-color {
+    color: red;
+}
+span.successphotoupload {
+    margin-left: 5px;
+    color:#94CA50;
+}
+
+span.successvideoupload{
+    margin-left: 5px;   
+    color:#94CA50;
+}
+.uploaded_msg{
+    float: left;
+    margin-left: 10px;
+    color:#94CA50;
+    font-size: 13px;
+}
+.list {
+   margin-top: 5px;
+}
+/* suhkwinder css */
+.sm_col-lg-4{
+    width: 138px;
+    float: left;
+}
+.sm_col-lg-6{
+    width:200px;
+}
+h4.undrline {
+    text-decoration: underline;
+}
+h5.undrline {
+    text-decoration: underline;
+}
+.brandsection-Continue-text {
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: #4E4E4E;
+   
+    color: #fff;
+    margin-left: -1em;
+    margin-top: 24px;
+    text-align: right;
+}
+.sm_col-lg-6.bck-clr {
+    background-color: #f2f2f2;
+    width: auto;
+   
+    height: 9.7em;
+}
+.sm_col-lg-2.pad {
+    height: 1em;
+}
+.sm_container.ff {
+    background-color: #fff;
+ 
+}
+.app-row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.pdng {
+    margin-top: 1em;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.sm_container.h4,
+.sm_container.h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit
+}
+.sm_container.h4,
+.sm_container.h5,
+.sm_container.h6,
+.sm_container h4,
+.sm_container h5,
+.sm_container h6 {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.sm_container.h4,
+.sm_container h4 {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+.sm_container.h5,
+.sm_container h5 {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+.sm_container p {
+    margin: 0 0 10px
+}
+.sm_container .uploaded_msg{
+    color: #94CA50;
+}
+.sm_container.clicked_img{
+    width: 150px;
+    height: 150px;
+    float:left;
+}
+.sm_container.button-upload{
+    width: 90px;
+    height: 60px;   
+}
+.sm_container.button-cp{
+    width: 145px;
+    height: 60px;   
+}
+.sm_container.button-tp{
+    width: 115px;
+    height: 60px;   
+}
+.sukh_footer {margin-top: 3.24em;}
+h1.text-center.no_of_comp {
+    font-size: 20px;
+    color: #4E8C2B;
+    margin-top: 5px;
+}

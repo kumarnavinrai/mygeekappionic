@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data:;default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+      
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
@@ -16,6 +18,7 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>  
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
@@ -23,7 +26,16 @@
     <script src="js/controllers.js"></script>
   </head>
 
-  <body ng-app="starter">
-    <ion-nav-view></ion-nav-view>
+  <body ng-app="starter" onload="onLoadB()" >
+   <ion-nav-view></ion-nav-view>
+   <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+    d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+    _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+    $.src="http://v2.zopim.com/?3J9s8vvooLEmRMxW3bMBwHNwIbED3zeb";z.t=+new Date;$.
+    type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+    <!--End of Zopim Live Chat Script-->        
   </body>
 </html>

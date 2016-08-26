@@ -1,0 +1,40 @@
+<ion-view view-title="{{playlistsheader}}{{playlistsheadermore}}">
+  <ion-content>
+    <h1>Services</h1>
+     <button class="button button-full button-assertive" ng-click="takePhoto()">
+        Take Photo
+    </button>
+    <button class="button button-full button-assertive" ng-click="choosePhoto()">
+        Choose Photo
+    </button>
+    <button class="button button-full button-assertive" ng-click="captureVideo()">
+        Capture Video
+    </button>
+    <button class="button button-full button-assertive" ng-click="testFileUpload()">
+        Upload Video
+    </button>
+    <button class="button button-full button-assertive" ng-click="testFileDownload()">
+        Download File
+    </button>
+    <button class="button button-full button-assertive" ng-click="testFileUploadTest()">
+        Upload File
+    </button>
+    
+    <center>
+    <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center"></center>
+    <center>
+      <ion-spinner ng-show="data.showSpinnerForUpload==false" icon="spiral"></ion-spinner>
+      <h4 ng-show="data.uploadProgress !== undefined" style="text-align: center">{{data.uploadProgress}}</h4>
+      <h4 ng-show="data.dPath !== undefined" style="text-align: center">{{data.dPath}}</h4>
+      <h4 ng-show="data.videoData !== undefined" style="text-align: center">videodata - {{data.videoData}}</h4>
+      <h4 ng-show="data.videoCopied !== undefined" style="text-align: center">videocopy - {{data.videoCopied}}</h4>
+      
+      <h4 ng-show="data.videoPathOnUpload !== undefined" style="text-align: center">videopathonupload - {{data.videoPathOnUpload}}</h4>
+      <h4 ng-show="data.videoPath !== undefined" style="text-align: center">videopath - {{data.videoPath}}</h4>
+      <h4 ng-show="data.videoSuccess !== undefined" style="text-align: center">success - {{data.videoSuccess}}</h4>
+      <h4 ng-show="data.videoErr !== undefined" style="text-align: center">error - {{data.videoErr}}</h4>
+      <h4 ng-show="data.videoProg !== undefined" style="text-align: center">progress - {{data.videoProg}}</h4>
+    </center>
+    
+  </ion-content>
+</ion-view>

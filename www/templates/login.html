@@ -1,25 +1,103 @@
 <ion-modal-view>
   <ion-header-bar>
-    <h1 class="title">Login</h1>
-    <div class="buttons">
+    <img class="title-image cust_login_logo" src="img/geeks-logo-mobile.png" >
+    
+    <div class="buttons cust_close">
       <button class="button button-clear" ng-click="closeLogin()">Close</button>
     </div>
   </ion-header-bar>
   <ion-content>
-    <form ng-submit="doLogin()">
+      <ion-spinner ng-show="loginData.LoadingView==false" icon="spiral"></ion-spinner>
+      <h4 ng-show="loginData.sentView" class="msg_sent" ng-model="loginData.LoadingView">Message Sent !!</h4>
+      <form name="myForm" ng-submit="doLogin('fromform')" novalidate>
+         <div class="padding error-color">
+            <span>
+            <span ng-show="myForm.username.$error.required">*Email required</span>
+            <span ng-show="myForm.username.$invalid && !myForm.username.$pristine">* Must be a valid email address</span>
+            <span ng-show="myForm.username.$error.minlength">* Email must be longer than 2 characters</span>
+            <span ng-show="myForm.cname.$error.required">*Name required</span>
+            <span ng-show="myForm.cname.$error.minlength">* Name must be longer than 2 characters</span>
+            <span ng-show="myForm.message.$error.required">*Message required</span>
+            <span ng-show="myForm.message.$error.minlength">* Message must be longer than 10 characters</span>
+            </span>
+            <div class="successphotoupload">
+              <img ng-show="loginData.imgURI !== undefined" ng-model="loginData.imgURI" ng-src="{{loginData.imgURI}}" class="clicked_img" style="text-align:center;width:50px;height:50px;float:left;"/>
+              <h4 ng-show="loginData.fileuploaded !== undefined" class="uploaded_msg">Picture Uploaded  </h4>
+            </div>
+            <div class="successvideoupload">
+              &nbsp;&nbsp;<img ng-show="loginData.videoThumb !== undefined" ng-model="loginData.videoThumb" ng-src="{{loginData.videoThumb}}" class="clicked_img" style="text-align:center;width:50px;height:50px;float:left;margin-left:5px;"/>
+              <h4 ng-show="loginData.videoSuccess !== undefined" class="uploaded_msg" >Video Uploaded</h4>
+              <h4 ng-show="loginData.videoErr !== undefined" class="uploaded_msg" >Video Uploaded Error Try Again</h4>
+
+            </div>  
+        </div>
+        <br/>
+        <div class="list">
+            <label class="item item-input">
+              <span class="input-label">Email</span>
+              <input type="email" name="username" ng-model="loginData.username" ng-minlength="2" required>    
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Name</span>
+              <input type="text" name="cname" ng-model="loginData.cname" ng-minlength="2" required>    
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Message</span>
+                <textarea name="message" ng-minlength="10" ng-model="loginData.message" required ></textarea>
+            </label>
+            <span class="picspan">
+              <button class="button button-tp button-blue" ng-click="takePhoto()">
+                  Take Photo
+              </button>
+              <button class="button button-cp button-blue" ng-click="choosePhoto()">
+                  Choose Photo
+              </button>
+              <button ng-show="loginData.imgURI !== undefined" class="button button-upload button-blue" ng-click="uploadPhoto()">
+              Upload
+              </button>
+              
+            </span>  
+            <span class="videospan">
+              <button class="button button-tp button-blue" ng-click="captureVideo()">
+                  Capture Video
+              </button>
+              <button class="button button-cp button-blue" ng-show="loginData.videoPath !== undefined" ng-click="testFileUpload()">
+                  Upload Video
+              </button>
+              
+            </span>  
+            <progress ng-show="loginData.uploadProgress !== undefined" ng-model="loginData.uploadProgress" max="100" value="{{loginData.uploadProgress}}" id="ft-prog"></progress>
+            <span ng-show="loginData.uploadProgress !== undefined" style="text-align:center;display:block;color:#94CA50;">Uploading.. {{loginData.uploadProgress | setDecimal:2}}%</span>
+            <ion-spinner ng-show="loginData.ShowSpinnerForUpload==true" icon="spiral"></ion-spinner>
+            <h4 ng-show="loginData.dontshowme !== undefined">{{loginData.imgURIRES=loginData.fileuploaded.file}}</h4>
+           
+        </div>
+        
+        <div class="padding">
+            <button type="button" class="button button-block button-positive" ng-disabled="myForm.$invalid" ng-click="doLogin('frombtn')">Send</button>
+        </div>
+
+    </form>
+      <!--<form name="myForm" ng-submit="doLogin()">
       <div class="list">
         <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
+          <span class="input-label">Name</span>
+          <input type="text" name="name" ng-model="loginData.name">
+          <span ng-show="myForm.name.$touched && myForm.name.$invalid">The name is required.</span>
         </label>
         <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="loginData.email">
         </label>
+        <label class="item item-input">
+          <span class="input-label">Message</span>
+          <input type="text" ng-model="loginData.message">
+        </label>  
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
+          <button class="button button-block button-positive" type="submit">Send</button>
         </label>
       </div>
-    </form>
+    </form>-->    
+
   </ion-content>
 </ion-modal-view>
